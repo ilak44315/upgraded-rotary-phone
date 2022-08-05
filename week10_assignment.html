@@ -1,3 +1,4 @@
+<!-- One page site with 1 bootstrap styled table and one bootstrap styled form that allows users to submit new row in a table.  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 10 Assignment</title>
-    <!-- Add boostap file.  -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
-<body>
-    
+<body class="container">
+    <br>
+    <div class="card">
+       <div class="card-body">
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="new-creation-date">Creation Date</label>
+                    <input type="date" class ='form-control' id="new-creation-date">
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="new-deadline-date">Deadline</label>
+                    <input type="date" class ='form-control' id="new-deadline-date">
+                </div>
+            </div>
+        </div>
+        <!-- add checkbox for request type ie: event/apparel/resourse. -->
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="new-request">Request Discription</label>
+                    <input type="text" class ='form-control' id="new-request" placeholder="Request Discription">
+            </div>
+            <!-- add check box for new creation or asset update. -->
+        </div>
+        </div>
+        <div>
+            <button id="add" class="btn btn-danger form-control">
+                Create
+            </button>
+        </div>
+       </div>
+    </div>
+   <table id="list" class="table table-dark table-striped">
+    <tr>
+        <th>Input Date<th></th> 
+        <th>Request Type</th>
+        <th>Request Discription</th>
+        <th>Deadline</th>
+    </tr>
+   </table>
+   
+    <!-- Add boostap file.  -->
+   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+   <script src="node_modules/jquery/dist/jquery.js"></script> 
 </body>
 </html>
